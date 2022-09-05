@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<script>
+    function inform(){
+        var textInput = document.getElementById("name");
+        var cusName = textInput.value;
+        var td = document.createElement("td"); 
+        var tr = document.createElement("tr");
+        var ta = document.getElementById("customer");
+        td.innerHTML = cusName;
+        ta.appendChild(tr);
+        ta.appendChild(td);    
+
+        var textInput = document.getElementById("address");
+        var cusAddress = textInput.value;
+        var td = document.createElement("td");
+        var tr = document.getElementById("customer");  
+        td.innerHTML = cusAddress;
+        tr.appendChild(td); 
+
+        var textInput = document.getElementById("phone");
+        var cusPhone = textInput.value;
+        var td = document.createElement("td");
+        var tr = document.getElementById("customer");
+        td.innerHTML = cusPhone;
+        tr.appendChild(td);
+    }
+</script>
+
+<style>
+    table, th, td{
+        border: 1px solid black;
+    }
+    th, td {
+            padding: 5px;
+    }
+</style>
+</head>
+
+<body>
+    <form>
+    ชื่อลูกค้า: <input type="text" id="name"><br>
+    ที่อยู่: <input type="text" id="address"><br>
+    โทรศัพท์: <input type="text" id="phone"><br>
+    <input type="button" id="addButton" value="เพิ่ม" onclick="inform()"><br>
+    </form>
+    
+    <br><br>
+    <table id="customer">
+    <tr>
+        <th>ชื่อลูกค้า</th>
+        <th>ที่อยู่</th>
+        <th>โทรศัพท์</th>
+      </tr>
+    </table>
+
+</body>
+</html>
+
